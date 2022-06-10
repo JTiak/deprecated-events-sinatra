@@ -1,0 +1,15 @@
+development:
+  clients:
+    default:
+      database: event_tracking_db_staging
+      hosts:
+        - localhost:27017
+      options:
+        server_selection_timeout: 5
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URL'] %>
+      options:
+        server_selection_timeout: 5
